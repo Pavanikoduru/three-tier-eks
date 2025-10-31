@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Three Tier Demo - Student Version</title>
+</head>
+<body>
+  <h1>Welcome to the Frontend!</h1>
+  <p id="msg">Loading backend message...</p>
+  <script>
+    fetch("http://backend:3000/api/message")
+      .then(r => r.json())
+      .then(j => document.getElementById("msg").innerText = j.message)
+      .catch(e => document.getElementById("msg").innerText = "Backend not reachable");
+  </script>
+</body>
+</html>
+
