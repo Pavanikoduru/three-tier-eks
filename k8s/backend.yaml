@@ -24,6 +24,8 @@ kind: Service
 metadata:
   name: backend
   namespace: three-tier
+  labels:        # ✅ add this block
+    app: backend
 spec:
   selector:
     app: backend
